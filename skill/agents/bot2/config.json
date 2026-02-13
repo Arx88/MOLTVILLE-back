@@ -1,0 +1,36 @@
+{
+    "server":  {
+                   "url":  "ws://localhost:3001",
+                   "apiKey":  "moltville_62a7821d613a49d6829ae2cf58aa0747"
+               },
+    "agent":  {
+                  "name":  "Nova",
+                  "avatar":  "char2",
+                  "personality":  "social, empathetic, cooperative"
+              },
+    "behavior":  {
+                     "autoExplore":  true,
+                     "conversationInitiation":  "high",
+                     "decisionInterval":  60000,
+                     "decisionLoop":  {
+                                          "enabled":  true,
+                                          "intervalMs":  12000,
+                                          "mode":  "llm"
+                                      },
+                     "arbitrationV2":  {
+                                           "queueTtlSec":  45,
+                                           "enabled":  true
+                                       }
+                 },
+    "llm":  {
+                "provider":  "ollama",
+                "model":  "qwen3:8b",
+                "apiKey":  "",
+                "baseUrl":  "http://localhost:11434",
+                "temperature":  0.35,
+                "timeoutSec":  60
+            },
+    "runtime":  {
+                    "serverLanguage":  "es"
+                }
+}
